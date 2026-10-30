@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Mitten unter uns № 04 · 20.11.2026 · Setlist</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=Archivo+Narrow:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f4efe4;
+    --cream-2:#ebe4d3;
+    --ink:#1a1612;
+    --ink-2:#3a3530;
+    --ink-dim:#7a716a;
+    --ink-dimmer:#a89f96;
+    --line:rgba(26,22,18,.12);
+    --line-strong:rgba(26,22,18,.28);
+    --accent:#d08a6a;       /* terra */
+    --accent-deep:#b66c4c;
+    --accent-soft:#e5b89c;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:'Archivo','Inter',Helvetica,Arial,sans-serif;
+    background:var(--cream); color:var(--ink);
+    font-size:17px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:1200px; margin:0 auto;
+    padding:clamp(2rem,4vw,3.5rem) clamp(1.5rem,7vw,6rem);
+  }
+
+  /* ─── HERO COVER ─── */
+  .hero{
+    position:relative;
+    margin:0 calc(-1 * clamp(1.5rem,7vw,6rem));   /* full-bleed */
+    background:#1a1612 url('hero_muu.jpg') center/cover no-repeat;
+    color:#f4efe4;
+    min-height:min(92vh, 920px);
+    display:flex; flex-direction:column;
+    padding:clamp(1.5rem,4vw,2.5rem) clamp(1.5rem,7vw,6rem) clamp(2rem,5vw,3.5rem);
+    overflow:hidden;
+    isolation:isolate;
+  }
+  .hero::before{
+    content:""; position:absolute; inset:0; z-index:-1;
+    background:
+      linear-gradient(180deg, rgba(26,22,18,.55) 0%, rgba(26,22,18,.15) 30%, rgba(26,22,18,.75) 75%, rgba(26,22,18,.92) 100%);
+  }
+
+  /* top meta on photo */
+  .meta-top{
+    display:flex; justify-content:space-between; align-items:baseline;
+    font-family:'Archivo Narrow','Archivo',sans-serif;
+    font-weight:700; font-size:.85rem; letter-spacing:.32em; text-transform:uppercase;
+    color:#f4efe4;
+    padding-bottom:.9rem;
+    border-bottom:1px solid rgba(244,239,228,.6);
+  }
+  .meta-top .right{color:var(--accent-soft)}
+  .meta-top em{font-style:italic;font-weight:400;color:var(--accent-soft);letter-spacing:.04em;text-transform:lowercase}
+
+  /* save-the-date row above title */
+  .save-row{
+    margin-top:auto;        /* push to bottom of hero */
+    display:flex; justify-content:space-between; align-items:baseline;
+    font-family:'Archivo Narrow','Archivo',sans-serif;
+    font-weight:700; font-size:.78rem; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--accent-soft);
+    padding-bottom:1rem;
+  }
+
+  /* kicker above the big display */
+  .hero-kicker{
+    margin:auto 0 .35rem;   /* push title block to bottom of hero */
+    font-family:'Archivo',sans-serif;
+    font-weight:700;
+    font-size:clamp(1.2rem,3.2vw,2.3rem);
+    line-height:1;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:#f4efe4;
+  }
+  .hero-kicker em{
+    font-style:italic; font-weight:400; color:var(--accent-soft);
+  }
+
+  /* the big editorial display */
+  .hero-display{
+    margin:0;
+    font-family:'Archivo',sans-serif;
+    font-weight:900;
+    font-size:clamp(4rem,17vw,13rem);
+    line-height:.84;
+    letter-spacing:.005em;          /* template uses +4px tracking */
+    text-transform:uppercase;
+    color:#f4efe4;
+  }
+  .hero-display em{
+    font-style:italic; font-weight:400; color:var(--accent-soft);
+  }
+
+  /* JESUS & FREUNDE — super-spread tracking like template */
+  .hero-tagline{
+    margin-top:1.4rem;
+    font-family:'Archivo Narrow','Archivo',sans-serif;
+    font-weight:400;
+    font-size:clamp(.85rem, 1.4vw, 1.1rem);
+    letter-spacing:1em;
+    text-transform:uppercase;
+    color:var(--accent-soft);
+    padding-left:.5em;       /* visual centering with letter-spacing */
+  }
+
+  .hero-info{
+    margin-top:1.6rem;
+    padding-top:1.1rem; border-top:1px solid rgba(244,239,228,.4);
+    display:flex; flex-wrap:wrap; gap:.8rem 2rem;
+    font-family:'Archivo Narrow','Archivo',sans-serif;
+    font-weight:400; font-size:clamp(.95rem,1.4vw,1.15rem);
+    letter-spacing:.08em; text-transform:uppercase;
+    color:#f4efe4;
+  }
+  .hero-info b{font-weight:700; color:var(--accent-soft); letter-spacing:.04em}
+  .hero-info .divider{color:rgba(244,239,228,.4); font-weight:400}
+
+  .hero-lead{
+    margin:2rem 0 0 0;
+    max-width:62ch; font-size:1.05rem; color:var(--ink-2);
+    font-family:'Archivo',sans-serif; font-weight:400;
+  }
+
+  /* ─── DOWNLOAD ALL ─── */
+  .download-all{
+    margin-top:1.6rem;
+    display:inline-flex; align-items:center; gap:1.1rem;
+    text-decoration:none;
+    padding:1rem 1.5rem;
+    background:var(--ink); color:var(--cream);
+    border:1px solid var(--ink);
+    transition:all .15s;
+  }
+  .download-all:hover{background:var(--accent-deep); border-color:var(--accent-deep)}
+  .download-all .da-mark{
+    font-family:'Archivo',sans-serif; font-weight:900; font-size:1.6rem; line-height:1;
+    color:var(--accent-soft);
+  }
+  .download-all .da-text{display:flex; flex-direction:column; gap:.15rem}
+  .download-all .da-title{
+    font-family:'Archivo',sans-serif; font-weight:900; font-size:1.05rem;
+    letter-spacing:-.01em; text-transform:uppercase;
+  }
+  .download-all .da-sub{
+    font-family:'Archivo Narrow','Archivo',sans-serif;
+    font-weight:700; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--accent-soft);
+  }
+
+  /* ─── LEGENDE ─── */
+  .legend{margin-top:3rem; padding-top:1.6rem; border-top:1px solid var(--line)}
+  .label{
+    display:inline-flex; align-items:center; gap:1rem;
+    font-family:'Archivo Narrow','Archivo',sans-serif;
+    font-weight:700; font-size:.78rem; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--accent-deep);
+  }
+  .label::before{content:""; width:32px; height:1px; background:var(--accent-deep)}
+  .legend-grid{
+    margin-top:1.2rem;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem;
+  }
+  .lvl{
+    display:flex; gap:1rem; padding:1rem 1.1rem;
+    background:var(--cream-2);
+    border:1px solid var(--line);
+  }
+  .lvl .badge{
+    flex:0 0 auto;
+    width:44px; height:44px;
+    display:grid; place-items:center;
+    font-family:'Archivo',sans-serif;
+    font-weight:900; font-size:1.4rem;
+    background:var(--accent); color:var(--cream);
+  }
+  .lvl.l2 .badge{background:transparent; color:var(--accent-deep); border:1.5px solid var(--accent)}
+  .lvl.l1 .badge{background:transparent; color:var(--ink-dim); border:1.5px solid var(--line-strong)}
+  .lvl .lvl-title{font-weight:700; font-size:.95rem; letter-spacing:.02em}
+  .lvl .lvl-desc{font-size:.88rem; color:var(--ink-dim); margin-top:.2rem; line-height:1.4}
+  @media (max-width:760px){ .legend-grid{grid-template-columns:1fr} }
+
+  /* ─── SECTION ─── */
+  section.act{
+    margin-top:clamp(2.5rem,5vw,4rem);
+    padding-top:clamp(2rem,4vw,3rem);
+    border-top:1px solid var(--ink);
+  }
+  .act-head{
+    display:grid; grid-template-columns:auto 1fr auto; gap:2rem;
+    align-items:baseline;
+  }
+  .act-num{
+    font-family:'Archivo',sans-serif;
+    font-weight:900; font-size:clamp(3rem,8vw,5.5rem);
+    line-height:1; letter-spacing:-.04em;
+    color:var(--accent);
+    font-variant-numeric:tabular-nums;
+  }
+  .act-title{
+    font-family:'Archivo',sans-serif;
+    font-weight:900; font-size:clamp(1.7rem,3.5vw,2.8rem);
+    line-height:1; letter-spacing:-.025em;
+    text-transform:uppercase;
+  }
+  .act-title em{font-style:italic; font-weight:400; color:var(--accent)}
+  .act-meta{
+    font-family:'Archivo Narrow','Archivo',sans-serif;
+    font-weight:700; font-size:.78rem; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--ink-dim); text-align:right;
+  }
+  .act-sub{
+    margin-top:.8rem; max-width:62ch;
+    color:var(--ink-2); font-size:1rem;
+  }
+  @media (max-width:700px){
+    .act-head{grid-template-columns:auto 1fr; gap:1rem}
+    .act-meta{grid-column:1 / -1; text-align:left; margin-top:.6rem}
+  }
+
+  /* ─── SONG ROWS ─── */
+  .songlist{margin-top:1.8rem; display:flex; flex-direction:column}
+  .songlist-head{
+    display:grid;
+    grid-template-columns:56px 1fr 90px 54px 86px 70px 100px;
+    gap:1.2rem; align-items:end;
+    padding:.7rem 0;
+    border-bottom:1.5px solid var(--ink);
+    font-family:'Archivo Narrow','Archivo',sans-serif;
+    font-weight:700; font-size:.72rem; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--ink);
+  }
+  .songlist-head .r{text-align:right}
+  .song{
+    display:grid;
+    grid-template-columns:56px 1fr 90px 54px 86px 70px 100px;
+    gap:1.2rem; align-items:center;
+    padding:1.2rem 0;
+    border-top:1px solid var(--line);
+  }
+  .songlist-head + .song{border-top:0}
+  .song:last-of-type{border-bottom:1px solid var(--line)}
+  .num{
+    font-family:'Archivo',sans-serif;
+    font-weight:900; font-size:2rem; letter-spacing:-.04em;
+    color:var(--ink-dimmer);
+    font-variant-numeric:tabular-nums;
+  }
+  .song .title{
+    font-family:'Archivo',sans-serif;
+    font-size:1.25rem; font-weight:700; letter-spacing:-.01em; line-height:1.2;
+  }
+  .song .title .sub{
+    color:var(--ink-dim); font-weight:400; font-size:.85rem;
+    margin-left:.5rem; letter-spacing:0;
+  }
+  .song .lead-name{
+    font-family:'Archivo Narrow','Archivo',sans-serif;
+    font-size:.85rem; color:var(--ink-dim); margin-top:.3rem;
+    letter-spacing:.08em; text-transform:uppercase;
+  }
+  .pill{
+    display:inline-block; padding:.3rem .6rem;
+    font-family:'Archivo Narrow','Archivo',sans-serif;
+    font-size:.72rem; font-weight:700; letter-spacing:.22em; text-transform:uppercase;
+    border:1px solid var(--line-strong); color:var(--ink); white-space:nowrap;
+  }
+  .pill.l3{background:var(--accent); color:var(--cream); border-color:var(--accent)}
+  .pill.l2{background:transparent; color:var(--accent-deep); border-color:var(--accent)}
+  .pill.l1{background:transparent; color:var(--ink-dim); border-color:var(--line-strong)}
+  .key{
+    font-family:'Archivo',sans-serif;
+    font-weight:900; font-size:1.5rem; letter-spacing:-.02em;
+    color:var(--accent-deep);
+  }
+  .tempo{display:flex; flex-direction:column; line-height:1.05}
+  .tempo .bpm{
+    font-family:'Archivo',sans-serif;
+    font-weight:700; font-size:1.15rem; letter-spacing:-.01em;
+    color:var(--ink); font-variant-numeric:tabular-nums;
+  }
+  .tempo .bpm .u{font-size:.68rem; font-weight:700; color:var(--ink-dim); margin-left:.15rem}
+  .tempo .beat{
+    font-family:'Archivo Narrow','Archivo',sans-serif;
+    font-size:.72rem; font-weight:700; letter-spacing:.12em;
+    color:var(--ink-dim); margin-top:.15rem;
+  }
+  .tempo .none{color:var(--ink-dimmer); font-weight:700}
+  .links, .audio{display:flex; flex-wrap:wrap; gap:.4rem; justify-content:flex-end}
+  .links a, .audio a{
+    text-decoration:none;
+    font-family:'Archivo Narrow','Archivo',sans-serif;
+    font-size:.72rem; font-weight:700; letter-spacing:.22em; text-transform:uppercase;
+    padding:.5rem .7rem;
+    border:1px solid var(--ink); color:var(--ink);
+    transition:all .15s;
+  }
+  .links a:hover, .audio a:hover{background:var(--ink); color:var(--cream)}
+  .links a.primary{background:var(--ink); color:var(--cream); border-color:var(--ink)}
+  .links a.primary:hover{background:var(--accent-deep); border-color:var(--accent-deep)}
+  .audio a.yt{border-color:var(--accent-deep); color:var(--accent-deep)}
+  .audio a.yt:hover{background:var(--accent-deep); color:var(--cream)}
+  .audio a.mp3{border-color:var(--ink); color:var(--ink)}
+  .audio a.mp3:hover{background:var(--ink); color:var(--cream)}
+  .audio .none{color:var(--ink-dimmer); font-family:'Archivo Narrow','Archivo',sans-serif; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase}
+
+  /* ─── INTERLUDE ─── */
+  .interlude{
+    display:grid; grid-template-columns:56px 1fr; gap:1.2rem; align-items:center;
+    padding:1.3rem 1.2rem;
+    margin-top:.4rem;
+    background:var(--cream-2);
+    border-left:3px solid var(--accent);
+  }
+  .interlude .mark{
+    font-family:'Archivo',sans-serif;
+    font-weight:900; font-size:1.6rem; color:var(--accent);
+    text-align:center;
+  }
+  .interlude .lbl{
+    font-family:'Archivo Narrow','Archivo',sans-serif;
+    font-size:.76rem; font-weight:700; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--accent-deep);
+  }
+  .interlude .what{
+    font-family:'Archivo',sans-serif;
+    font-size:1.25rem; font-weight:700; margin-top:.2rem;
+  }
+
+  /* ─── RESERVE ─── */
+  .reserve{
+    margin-top:2.5rem; padding:1.6rem;
+    border:1px dashed var(--line-strong);
+    background:var(--cream);
+  }
+  .reserve .res-head{
+    display:flex; align-items:baseline; gap:1rem; flex-wrap:wrap;
+  }
+  .reserve .song{border-top:0; padding-top:1.2rem}
+  .reserve .song .title,
+  .reserve .song .num,
+  .reserve .song .key{color:var(--ink-dim)}
+
+  /* ─── FOOTER ─── */
+  footer{
+    margin-top:clamp(3rem,6vw,5rem);
+    padding:2rem 0 1rem 0;
+    border-top:1px solid var(--ink);
+    display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline;
+    gap:1rem 2rem;
+    font-family:'Archivo Narrow','Archivo',sans-serif;
+    font-size:.78rem; font-weight:700; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--ink);
+  }
+  footer em{font-style:italic; font-weight:400; color:var(--accent); text-transform:lowercase; letter-spacing:.02em}
+
+  /* responsive song layout */
+  @media (max-width:760px){
+    .songlist-head{display:none}
+    .song{grid-template-columns:44px 1fr; grid-template-rows:auto auto auto auto}
+    .song .key{grid-column:2; justify-self:start}
+    .song .tempo{grid-column:2; justify-self:start; flex-direction:row; gap:.6rem; align-items:baseline}
+    .song .tempo .beat{margin-top:0}
+    .song .pill{grid-column:2}
+    .song .links{grid-column:1 / -1; justify-content:flex-start}
+    .song .audio{grid-column:1 / -1; justify-content:flex-start}
+    .song:first-of-type{border-top:1.5px solid var(--ink)}
+  }
+
+  /* print */
+  @media print{
+    body{background:#fff}
+    .wrap{max-width:none; padding:12mm}
+    .hero-photo{aspect-ratio:5/2}
+    section.act{page-break-inside:avoid}
+    .legend-grid{grid-template-columns:repeat(3,1fr)}
+    .links a{border-color:#0b1112; color:#0b1112}
+    .pill.l3{background:#0b1112; color:#fff; border-color:#0b1112}
+  }
+
+  .songlist-head, .song{grid-template-columns:56px 1fr 54px 86px 70px 100px}
+  section.act > .interlude{margin:0 0 1.2rem}
+  @media (max-width:760px){
+    .song{grid-template-columns:44px 1fr}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="meta-top">
+      <span>Mitten unter <em>uns</em></span>
+      <span class="right">№ 04 · 26</span>
+    </div>
+
+    <div class="hero-kicker">Mitten unter <em>uns</em></div>
+    <h1 class="hero-display">Setlist</h1>
+
+    <div class="hero-info">
+      <span><b>Freitag</b> · 20. November 2026 · 20:00</span>
+      <span class="divider">/</span>
+      <span><b>Gast</b> · Anniek Rubin</span>
+    </div>
+  </header>
+
+  <p class="hero-lead">Ablauf für unseren Lobpreis-Abend. Alle Leadsheets sind direkt verlinkt – ein Klick auf <strong>PDF</strong> öffnet das jeweilige Blatt, <strong>YT</strong> die Referenz-Aufnahme.</p>
+
+  <a class="download-all" href="Setlist_MUU_20_November_2026.pdf" target="_blank">
+    <span class="da-mark">↓</span>
+    <span class="da-text">
+      <span class="da-title">Alle Songs als ein PDF</span>
+      <span class="da-sub">7 Leadsheets · 13 Seiten · in Setlist-Reihenfolge</span>
+    </span>
+  </a>
+
+  <section class="act">
+    <div class="act-head">
+      <div class="act-num">I</div>
+      <div>
+        <div class="act-title">Erster <em>block</em></div>
+      </div>
+      <div class="act-meta">7 Songs</div>
+    </div>
+    <div class="interlude">
+      <div class="mark">→</div>
+      <div>
+        <div class="lbl">Zum Start</div>
+        <div class="what">Begrüßung · David</div>
+      </div>
+    </div>
+
+    <div class="songlist">
+
+      <div class="songlist-head">
+        <div>№</div>
+        <div>Song · Lead</div>
+        <div>Key</div>
+        <div>Tempo</div>
+        <div class="r">Sheet</div>
+        <div class="r">Audio</div>
+      </div>
+
+      <div class="song">
+        <div class="num">01</div>
+        <div>
+          <div class="title">Meine Seele sing</div>
+          <div class="lead-name">David &amp; Lisa</div>
+        </div>
+        <div class="key">F</div>
+        <div class="tempo"><span class="bpm">168<span class="u">BPM</span></span><span class="beat">4/4</span></div>
+        <div class="links"><a class="primary" href="Meine_Seele_sing_F.pdf" target="_blank">PDF</a></div>
+        <div class="audio"><a class="yt" href="https://www.youtube.com/watch?v=5nwflDLUFds" target="_blank" title="Mitten unter uns – Musikvideo">YT</a></div>
+      </div>
+      <div class="song">
+        <div class="num">02</div>
+        <div>
+          <div class="title">Wach Auf Mein Herz</div>
+          <div class="lead-name">Lisa</div>
+        </div>
+        <div class="key">F</div>
+        <div class="tempo"><span class="bpm">127<span class="u">BPM</span></span></div>
+        <div class="links"><a class="primary" href="Wach_Auf_Mein_Herz_F.pdf" target="_blank">PDF</a></div>
+        <div class="audio"><a class="yt" href="https://www.youtube.com/watch?v=CgdevW5MOpc" target="_blank" title="Hillsong auf Deutsch">YT</a></div>
+      </div>
+      <div class="song">
+        <div class="num">03</div>
+        <div>
+          <div class="title">Wunderbarer Gott</div>
+          <div class="lead-name">David</div>
+        </div>
+        <div class="key">D</div>
+        <div class="tempo"><span class="bpm">95<span class="u">BPM</span></span><span class="beat">4/4</span></div>
+        <div class="links"><a class="primary" href="Wunderbarer_Gott_D.pdf" target="_blank">PDF</a></div>
+        <div class="audio"><a class="yt" href="https://www.youtube.com/watch?v=YVYbOOZDpyo" target="_blank" title="Lyric Video">YT</a></div>
+      </div>
+      <div class="song">
+        <div class="num">04</div>
+        <div>
+          <div class="title">JHWH - Dein Name</div>
+          <div class="lead-name">Lisa</div>
+        </div>
+        <div class="key">D</div>
+        <div class="tempo"><span class="bpm">92<span class="u">BPM</span></span><span class="beat">4/4</span></div>
+        <div class="links"><a class="primary" href="JHWH_Dein_Name_D.pdf" target="_blank">PDF</a></div>
+        <div class="audio"><a class="yt" href="https://www.youtube.com/watch?v=jdCmKcU-D2w" target="_blank" title="Mitten unter uns – Musikvideo">YT</a></div>
+      </div>
+      <div class="song">
+        <div class="num">05</div>
+        <div>
+          <div class="title">Wer sonst (Who else)</div>
+          <div class="lead-name">Anniek</div>
+        </div>
+        <div class="key">C</div>
+        <div class="tempo"><span class="bpm">68<span class="u">BPM</span></span><span class="beat">4/4</span></div>
+        <div class="links"><a class="primary" href="Wer_sonst_Who_else_C.pdf" target="_blank">PDF</a></div>
+        <div class="audio"><a class="yt" href="https://www.youtube.com/watch?v=oeSKZenoCOc" target="_blank" title="Gateway Worship / LOBEN feat. Anniek Rubin">YT</a></div>
+      </div>
+      <div class="song">
+        <div class="num">06</div>
+        <div>
+          <div class="title">Dein Wille</div>
+          <div class="lead-name">Anniek</div>
+        </div>
+        <div class="key">C</div>
+        <div class="tempo"><span class="none">—</span></div>
+        <div class="links"><a class="primary" href="Dein_Wille_C.pdf" target="_blank">PDF</a></div>
+        <div class="audio"><a class="yt" href="https://www.youtube.com/watch?v=bJNsWWvJPXQ" target="_blank" title="Kirche für Oberberg feat. Anniek Rubin">YT</a></div>
+      </div>
+      <div class="song">
+        <div class="num">07</div>
+        <div>
+          <div class="title">Mein Herz singt</div>
+          <div class="lead-name">David &amp; Lisa</div>
+        </div>
+        <div class="key">E</div>
+        <div class="tempo"><span class="bpm">72<span class="u">BPM</span></span><span class="beat">4/4</span></div>
+        <div class="links"><a class="primary" href="Mein_Herz_singt_E.pdf" target="_blank">PDF</a></div>
+        <div class="audio"><a class="yt" href="https://www.youtube.com/watch?v=mENCTHtDHYI" target="_blank" title="Mitten unter uns – Musikvideo">YT</a></div>
+      </div>
+
+    </div>
+  </section>
+  <section class="act">
+    <div class="act-head">
+      <div class="act-num">II</div>
+      <div>
+        <div class="act-title">Freier <em>lobpreis</em></div>
+      </div>
+      <div class="act-meta">1 Song</div>
+    </div>
+    <div class="interlude">
+      <div class="mark">→</div>
+      <div>
+        <div class="lbl">Danach</div>
+        <div class="what">INPUT Anniek</div>
+      </div>
+    </div>
+    <div class="interlude">
+      <div class="mark">→</div>
+      <div>
+        <div class="lbl">Danach</div>
+        <div class="what">20-30 min freier Lobpreis sehr reduziert (akustisch) geleitet von Anniek</div>
+      </div>
+    </div>
+
+    <div class="songlist">
+
+      <div class="songlist-head">
+        <div>№</div>
+        <div>Song · Lead</div>
+        <div>Key</div>
+        <div>Tempo</div>
+        <div class="r">Sheet</div>
+        <div class="r">Audio</div>
+      </div>
+
+      <div class="song">
+        <div class="num">08</div>
+        <div>
+          <div class="title">Midst <span class="sub">· optional</span></div>
+          <div class="lead-name">Anniek · und wenn, dann auf Deutsch: Mitten Unter Uns</div>
+        </div>
+        <div class="key">E</div>
+        <div class="tempo"><span class="none">—</span></div>
+        <div class="links"><span class="none">—</span></div>
+        <div class="audio"><span class="none">—</span></div>
+      </div>
+
+    </div>
+  </section>
+  <section class="act">
+    <div class="interlude">
+      <div class="mark">→</div>
+      <div>
+        <div class="lbl">Zum Schluss</div>
+        <div class="what">ABSCHLUSS mit Songs wie JOY, Washed, Praise   oder  mit ruhigen, starken Hymnen (Wir erheben dich..)</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>EFG Freilassing · <em>Lobpreis</em></span>
+    <span>№ 04 · 20.11.2026</span>
+  </footer>
+
+</div>
+</body>
+</html>
