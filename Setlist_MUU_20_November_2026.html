@@ -400,6 +400,15 @@
   }
   .hero-team dt{font-weight:700; color:var(--accent-soft); letter-spacing:.2em; font-size:.82em; align-self:center}
   .hero-team dd{margin:0}
+  .pool{margin-top:2rem; padding:1.4rem 1.5rem 1.6rem; background:var(--cream-2); border-left:2px solid var(--accent)}
+  .pool-head .lbl{font-family:'Archivo Narrow','Archivo',sans-serif; font-weight:700; font-size:.72rem; letter-spacing:.28em; text-transform:uppercase; color:var(--accent-deep)}
+  .pool-note{margin-top:.35rem; font-size:.92rem; color:var(--ink-2); max-width:70ch}
+  .pool-list{margin:1.1rem 0 0; padding:0; list-style:none; columns:3 220px; column-gap:2rem; counter-reset:pool}
+  .pool-list li{break-inside:avoid; display:flex; align-items:baseline; gap:.6rem; padding:.42rem 0; border-bottom:1px solid var(--line); counter-increment:pool}
+  .pool-list li::before{content:counter(pool, decimal-leading-zero); font-family:'Archivo',sans-serif; font-weight:900; font-size:.8rem; color:var(--ink-dimmer); min-width:1.6rem}
+  .pool-list .pt{font-weight:600; flex:1}
+  .pool-list .nns{font-family:'Archivo Narrow','Archivo',sans-serif; font-weight:700; font-size:.66rem; letter-spacing:.16em; text-decoration:none;
+    padding:.18rem .5rem; background:var(--ink); color:var(--cream)}
   .hero-team dd.open{color:rgba(244,239,228,.55); font-style:italic; text-transform:none; letter-spacing:.02em}
   @media (max-width:760px){
     .song{grid-template-columns:44px 1fr}
@@ -548,6 +557,7 @@
       </div>
 
     </div>
+
   </section>
   <section class="act">
     <div class="act-head">
@@ -595,6 +605,33 @@
         <div class="audio"><span class="none">—</span></div>
       </div>
 
+    </div>
+    <div class="pool">
+      <div class="pool-head">
+        <div class="lbl">Liedauswahl · freier Lobpreis</div>
+        <div class="pool-note">Pool für die freie Lobpreiszeit – keine feste Reihenfolge, keine feste Tonart. <b>NNS</b> = Chart in Nashville-Zahlen.</div>
+      </div>
+      <ol class="pool-list">
+        <li><span class="pt">Ich will dich anbeten</span></li>
+        <li><span class="pt">I Speak Jesus</span></li>
+        <li><span class="pt">Wie schön dieser Name ist</span></li>
+        <li><span class="pt">Ich lieb dich Herr</span></li>
+        <li><span class="pt">Groß bist du Herr</span></li>
+        <li><span class="pt">Würdig</span></li>
+        <li><span class="pt">König aller Könige</span></li>
+        <li><span class="pt">Ich singe dir ein Liebeslied</span></li>
+        <li><span class="pt">Danke Jesus</span></li>
+        <li><span class="pt">Alleluia</span></li>
+        <li><span class="pt">Gräber zu Gärten</span></li>
+        <li><span class="pt">So groß ist der Herr</span></li>
+        <li><span class="pt">Dir gebührt die Ehre</span></li>
+        <li><span class="pt">Heilig für immer</span></li>
+        <li><span class="pt">Mein ganzes Leben</span></li>
+        <li><span class="pt">Schaffe Raum</span></li>
+        <li><span class="pt">Ich geb mich ganz hin</span></li>
+        <li><span class="pt">Wo ich auch stehe</span></li>
+        <li><span class="pt">Herr ich komme zu dir</span></li>
+      </ol>
     </div>
   </section>
   <section class="act">
