@@ -393,6 +393,14 @@
 
   .songlist-head, .song{grid-template-columns:56px 1fr 54px 86px 70px 100px}
   section.act > .interlude{margin:0 0 1.2rem}
+  .hero-team{
+    margin:1.1rem 0 0; display:grid; grid-template-columns:auto 1fr; gap:.45rem 1.6rem;
+    font-family:'Archivo Narrow','Archivo',sans-serif; font-size:clamp(.88rem,1.3vw,1.05rem);
+    letter-spacing:.06em; text-transform:uppercase; color:#f4efe4;
+  }
+  .hero-team dt{font-weight:700; color:var(--accent-soft); letter-spacing:.2em; font-size:.82em; align-self:center}
+  .hero-team dd{margin:0}
+  .hero-team dd.open{color:rgba(244,239,228,.55); font-style:italic; text-transform:none; letter-spacing:.02em}
   @media (max-width:760px){
     .song{grid-template-columns:44px 1fr}
   }
@@ -412,9 +420,16 @@
 
     <div class="hero-info">
       <span><b>Freitag</b> · 20. November 2026 · 20:00</span>
-      <span class="divider">/</span>
-      <span><b>Gast</b> · Anniek Rubin</span>
     </div>
+
+    <dl class="hero-team">
+      <dt>Lobpreisleitung</dt><dd class="">Lisa Beck · Anniek Rubin · David Krexa</dd>
+      <dt>E-Gitarre</dt><dd class="">Martin Bloch</dd>
+      <dt>Keys</dt><dd class="">Manuel Bergmair</dd>
+      <dt>Bass</dt><dd class="open">noch offen</dd>
+      <dt>Drums</dt><dd class="">Aaron Eil</dd>
+      <dt>Backings</dt><dd class="">Maria Bergmair · Karola Krexa</dd>
+    </dl>
   </header>
 
   <p class="hero-lead">Ablauf für unseren Lobpreis-Abend. Alle Leadsheets sind direkt verlinkt – ein Klick auf <strong>PDF</strong> öffnet das jeweilige Blatt, <strong>YT</strong> die Referenz-Aufnahme.</p>
